@@ -45,28 +45,43 @@
         .btn-outline {
             color: #222222;
         }
-        .btn-primary:hover {
+        .btn-primary:hover,
+        .btn-primary.forced-hover {
             background-color: #0056b3;
         }
-        .btn-secondary:hover {
+
+        .btn-secondary:hover,
+        .btn-secondary.forced-hover {
             background-color: orange;
         }
-        .btn-outline:hover {
+
+        .btn-outline:hover,
+        .btn-outline.forced-hover {
             background-color: #dddddd;
         }
-        .btn-send:hover {
+
+        .btn-send:hover,
+        .btn-send.forced-hover {
             background-color: rgb(20, 120, 50);
         }
+
     </style>
 </head>
 <body>
     <main>
-        <h2>Judul Bagian</h2>
+        <h2>Button</h2>
         <div class="button-group">
             <a class="btn btn-primary">Lihat Proyek</a>
             <a class="btn btn-secondary">Unduh CV</a>
             <a class="btn btn-outline">Hubungi Saya</a>
             <a class="btn btn-send">Kirim Pesan</a>
+        </div>
+        <h2>Button forced to be hovered</h2>
+        <div class="button-group">
+            <a class="btn btn-primary forced-hover">Lihat Proyek</a>
+            <a class="btn btn-secondary forced-hover">Unduh CV</a>
+            <a class="btn btn-outline forced-hover">Hubungi Saya</a>
+            <a class="btn btn-send forced-hover">Kirim Pesan</a>
         </div>
     </main>
     <footer>
