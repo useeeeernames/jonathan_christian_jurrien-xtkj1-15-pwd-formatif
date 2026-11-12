@@ -5,42 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f4f4;
         }
-        .container {
+        .layout {
             display: flex;
             min-height: 100vh;
         }
-        .sidebar {
-            width: 220px;
+        #sidebar {
+            width: 25%;
             background-color: #222;
-            padding: 25px 20px;
+            padding: 20px;
             box-sizing: border-box;
         }
-        .sidebar h2 {
+        #sidebar h3 {
             color: white;
             margin-top: 0;
         }
-        .sidebar ul {
+        #sidebar ul {
             list-style: none;
             padding: 0;
         }
-        .sidebar li {
-            margin-bottom: 20px;
+        #sidebar nav li {
+            margin-bottom: 12px;
         }
-        .sidebar a {
+        #sidebar a {
             color: white;
             text-decoration: none;
         }
-        .sidebar a:hover {
+        #sidebar a:hover {
             color: #9b5f6c;
         }
-        main {
-            flex: 1;
+        .main-content {
+            width: 75%;
             padding: 30px;
+        }
+        .main-content h1 {
+            color: #222;
+        }
+        .main-content p {
+            line-height: 1.6;
         }
         .content {
             background-color: white;
@@ -49,44 +58,46 @@
         }
         footer {
             margin-top: 30px;
-            padding: 20px;
+            padding: 14px;
             background-color: #ddd;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <h2>Menu</h2>
-            <ul>
-                <li><a>Beranda</a></li>
-                <li><a>Profil</a></li>
-                <li><a>Proyek</a></li>
-                <li><a>Kontak</a></li>
-            </ul>
+    <div class="layout">
+        <aside id="sidebar">
+            <h3>Menu</h3>
+            <nav>
+                <ul>
+                    <li><a>Beranda</a></li>
+                    <li><a>Profil</a></li>
+                    <li><a>Proyek</a></li>
+                    <li><a>Kontak</a></li>
+                </ul>
+            </nav>
         </aside>
-        <main>
-        <div class="content">
-            <h1>Selamat Datang</h1>
-            <p>gak tau lah</p>
-            <section id="profil">
-                <h2>Profil</h2>
-                <p>Saya adalah seorang pelajar yang tertarik dengan teknologi, pemrograman, dan desain website.</p>
-            </section>
-            <section id="proyek">
-                <h2>Proyek Saya</h2>
-                <p>Saya sedang belajar membuat website menggunakan HTML, dan dan dan dan dan CSS</p>
-            </section>
-            <section id="kontak">
-                <h2>Kontak</h2>
-                <p>Tidak terima kasih sudah mengunjungi halaman saya.</p>
-            </section>
-        </div>
-        <footer>
-            <a href="../index.html">Kembali ke Beranda</a>
-        </footer>
+        <main class="main-content">
+            <div class="content">
+                <h1>Selamat Datang</h1>
+                <p>gak tau lah</p>
+                <section id="profil">
+                    <h2>Profil</h2>
+                    <p>Saya adalah seorang pelajar yang tertarik dengan teknologi, pemrograman, dan desain website.</p>
+                </section>
+                <section id="proyek">
+                    <h2>Proyek Saya</h2>
+                    <p>Saya sedang belajar membuat website menggunakan HTML, dan dan dan dan dan CSS</p>
+                </section>
+                <section id="kontak">
+                    <h2>Kontak</h2>
+                    <p>Tidak terima kasih sudah mengunjungi halaman saya.</p>
+                </section>
+            </div>
         </main>
     </div>
+    <footer>
+        <a href="../index.html">Kembali ke Beranda</a>
+    </footer>
 </body>
 </html>

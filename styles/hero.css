@@ -6,12 +6,12 @@ body {
 #hero {
     display: flex;
     background-image: url('../assets/images/hero-background.jpg');
-    background-size: cover;
+    background-size: cover; /* gambar menutupi seluruh area tanpa gepeng */
     background-position: center;
     height: 400px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* pusatkan isi secara horizontal */
+    align-items: center;     /* pusatkan isi secara vertikal */
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ body {
     font-family: Arial, sans-serif;
     width: 640px;
     padding: 30px;
-    background-color: rgba(59, 59, 59, 0.836);
+    background-color: rgba(59, 59, 59, 0.836); /* abu-abu agak transparan agar gambar latar masih terlihat */
     border-radius: 30px;
 }
 
@@ -29,25 +29,28 @@ h1 {
     margin-top: 0;
 }
 
+/* Animasi muncul untuk judul dan paragraf di dalam hero */
 .hero-content h1,
 .hero-content p {
-    animation-name: slide-up;
-    animation-duration: 1.2s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.3s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: backwards;
+    animation-name: slide-up;           /* nama animasi, didefinisikan di @keyframes di bawah */
+    animation-duration: 1.2s;           /* lama animasi berjalan */
+    animation-timing-function: ease-out; /* gerak cepat di awal, melambat di akhir */
+    animation-delay: 0.3s;              /* tunggu 0.3 detik sebelum mulai */
+    animation-iteration-count: 1;       /* hanya diputar sekali */
+    animation-direction: normal;        /* berjalan maju dari 0% ke 100% */
+    animation-fill-mode: backwards;     /* selama menunggu delay, elemen memakai kondisi 0% (tersembunyi), jadi tidak berkedip */
 }
 
+/* Paragraf mulai lebih lambat dari judul, jadi muncul bergantian */
 .hero-content p {
     animation-delay: 0.6s;
 }
 
+/* Tahapan animasi: elemen naik dari bawah sambil menjadi terlihat */
 @keyframes slide-up {
     0% {
-        transform: translateY(60px);
-        opacity: 0;
+        transform: translateY(60px); /* mulai 60px di bawah posisi akhir */
+        opacity: 0;                  /* transparan penuh */
     }
 
     25% {
@@ -66,19 +69,21 @@ h1 {
     }
 
     100% {
-        transform: translateY(0);
-        opacity: 1;
+        transform: translateY(0);    /* sampai di posisi sebenarnya */
+        opacity: 1;                  /* terlihat penuh */
     }
 }
 
+/* Tombol/tautan: selector panjang agar hanya mengenai link di dalam hero-content */
 #hero .hero-content a {
     background-color: #7b8b9b;
     color: white;
     padding: 10px 20px;
     border-radius: 15px;
-    text-decoration: none;
+    text-decoration: none; /* hilangkan garis bawah */
 }
 
+/* Memusatkan elemen di dalamnya secara horizontal (misalnya pembungkus tombol) */
 .center {
     display: flex;
     justify-content: center;
